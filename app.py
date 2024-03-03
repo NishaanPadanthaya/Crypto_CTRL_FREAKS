@@ -93,7 +93,7 @@ def find_platform(transaction_id, input_address, output_address):
         return None
 
 def get_transaction_data(address):
-    api_url = f"https://blockchain.info/rawtx/b6f6991d03df0e2e04dafffcd6bc418aac66049e2cd74b80f14ac86db1e3f0da"
+    api_url = f"https://blockchain.info/rawtx/{address}"
     response = requests.get(api_url)
     if response.status_code == 200:
         data = response.json()
